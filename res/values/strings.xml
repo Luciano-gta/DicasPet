@@ -8,5 +8,7 @@
     <string name="hint_digite_seu_e_mail">Digite seu e-mail</string>
     <string name="hint_digite_sua_senha">Digite sua senha</string>
     <string name="btn_entrar">Entrar</string>
+    <string name="nome_user">Mary da Silva</string>
+    <string name="email_user">mary@celtic.com.br</string>
     
 </resources>
