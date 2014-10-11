@@ -13,12 +13,14 @@ public class Loading extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loading);
     }
-
+	// TODO Verificar necessidade desta class
+    
+/*
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.loading, menu);
+        getMenuInflater().inflate(R.menu.menu_home, menu);
         return true;
     }
 
@@ -33,4 +35,5 @@ public class Loading extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+*/    
 }

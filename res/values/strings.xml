@@ -10,5 +10,10 @@
     <string name="btn_entrar">Entrar</string>
     <string name="nome_user">Mary da Silva</string>
     <string name="email_user">mary@celtic.com.br</string>
+    <string name="meus_pets">Meus Pets</string>
+    <string name="peso_deal">Peso Ideal</string>
+    <string name="reproducao_animal">Reprodução Animal</string>
+    <string name="servicos">Serviço</string>
     
+    <string name="Sobre">Sobre</string>
 </resources>

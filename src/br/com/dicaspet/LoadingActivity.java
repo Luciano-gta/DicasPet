@@ -15,7 +15,7 @@ public class LoadingActivity extends Activity {
         Thread splash_screen = new Thread(){
         	public void run(){
         		try {
-					sleep(5000);
+					sleep(3000);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}finally{
