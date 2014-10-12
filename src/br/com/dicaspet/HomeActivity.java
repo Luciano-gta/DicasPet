@@ -33,11 +33,10 @@ public class HomeActivity extends Activity{
 	        
 	        switch (id) {
 			case R.id.item_pets:
-				Toast.makeText(this, "Meus Pets", Toast.LENGTH_SHORT).show();
+				startActivity(new Intent(getApplicationContext(),MeusPetsActivity.class));
 				break;
 			case R.id.item_peso:
-				//startActivity(new Intent(getApplicationContext(),PesoActivity.class));
-				Toast.makeText(this, "Peso Idel", Toast.LENGTH_SHORT).show();
+				startActivity(new Intent(getApplicationContext(),PesoActivity.class));
 				break;
 			case R.id.item_reproducao:
 				Toast.makeText(this, "Lista Reprodução", Toast.LENGTH_SHORT).show();

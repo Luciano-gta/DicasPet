@@ -11,9 +11,26 @@
     <string name="nome_user">Mary da Silva</string>
     <string name="email_user">mary@celtic.com.br</string>
     <string name="meus_pets">Meus Pets</string>
-    <string name="peso_deal">Peso Ideal</string>
+    <string name="peso_ideal">Peso Ideal</string>
     <string name="reproducao_animal">Reprodução Animal</string>
     <string name="servicos">Serviço</string>
-    
-    <string name="Sobre">Sobre</string>
+    <string name="consulta_peso_ideal">Consulta do Peso Ideal</string>
+    <string name="hint_consulta_peso_ideal">Digite o Peso do Cachorro</string>
+    <string name="porte">Selecione o Porte do Animal:</string>
+    <string name="pequeno">Pequeno</string>
+    <string name="medio">Médio</string>
+    <string name="grande">Grande</string>
+    <string name="sexo">Sexo:</string>
+    <string name="macho">Macho</string>
+    <string name="femea">Fêmea</string>
+    <string name="calcular">Calcular Peso</string>
+    <string name="nome_pet">Nome</string>
+    <string name="especie">Especie</string>
+    <string name="raca">Raça</string>
+    <string name="porte_ani">Porte</string>
+    <string name="peso">Peso</string>
+    <string name="idade">Idade</string>
+    <string name="sobre">Sobre</string>
+    <string name="perfil_pet">Perfil do Pet</string>
+
 </resources>

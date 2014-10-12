@@ -18,6 +18,7 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -31,6 +32,42 @@
         <activity
             android:name=".HomeActivity"
             android:label="@string/app_name" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PesoActivity"
+            android:label="@string/peso_ideal"
+            android:parentActivityName="br.com.dicaspet.HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.dicaspet.HomeActivity" />
+
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MeusPetsActivity"
+            android:label="@string/meus_pets"
+            android:parentActivityName="br.com.dicaspet.HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.dicaspet.HomeActivity" />
+
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+           <activity
+            android:name=".PerfilPetActivity"
+            android:label="@string/perfil_pet"
+            android:parentActivityName="br.com.dicaspet.HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.dicaspet.HomeActivity" />
+
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

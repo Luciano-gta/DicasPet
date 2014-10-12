@@ -4,13 +4,13 @@
 
     <item
         android:id="@+id/item_pets"
-        android:icon="@android:drawable/ic_menu_search"
+        android:icon="@drawable/ic_cachorro"
         android:showAsAction="ifRoom|withText"
         android:title="@string/meus_pets"/>
     <item
         android:id="@+id/item_peso"
         android:showAsAction="ifRoom|withText"
-        android:title="@string/peso_deal"/>
+        android:title="@string/peso_ideal"/>
     <item
         android:id="@+id/item_reproducao"
         android:showAsAction="ifRoom"
@@ -22,6 +22,6 @@
     <item
         android:id="@+id/sobre"
         android:showAsAction="ifRoom"
-        android:title="@string/Sobre"/>
+        android:title="@string/sobre"/>
 
 </menu>
