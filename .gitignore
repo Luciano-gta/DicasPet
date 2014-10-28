@@ -214,3 +214,9 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+bin/classes/br/com/dicaspet/R$drawable.class
+bin/classes/br/com/dicaspet/R$id.class
+bin/classes/br/com/dicaspet/R$layout.class
+bin/classes/br/com/dicaspet/R$menu.class
+bin/classes/br/com/dicaspet/R$string.class
+bin/classes/br/com/dicaspet/R$style.class
