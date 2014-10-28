@@ -13,6 +13,7 @@
         android:contentDescription="@string/alt_logomarca_do_dicaspet"
         android:src="@drawable/logodicaspet_transp" />
 
+
     <EditText
         android:id="@+id/editMail"
         android:layout_width="match_parent"
@@ -22,7 +23,11 @@
         android:background="#ffffff"
         android:ems="10"
         android:hint="@string/hint_digite_seu_e_mail"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:cursorVisible="true">
+            <requestFocus />
+        
+    </EditText>
 
     <EditText
         android:id="@+id/editSenhaMail"
@@ -36,8 +41,6 @@
         android:hint="@string/hint_digite_sua_senha"
         android:inputType="textPassword"
         android:padding="10dp" >
-
-        <requestFocus />
     </EditText>
 
     <Button

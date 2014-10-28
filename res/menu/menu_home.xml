@@ -1,27 +1,21 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="br.com.dicaspet.Loading" >
-
-    <item
-        android:id="@+id/item_pets"
-        android:icon="@drawable/ic_cachorro"
-        android:showAsAction="ifRoom|withText"
-        android:title="@string/meus_pets"/>
-    <item
-        android:id="@+id/item_peso"
-        android:showAsAction="ifRoom|withText"
-        android:title="@string/peso_ideal"/>
-    <item
-        android:id="@+id/item_reproducao"
-        android:showAsAction="ifRoom"
-        android:title="@string/reproducao_animal"/>
-    <item
-        android:id="@+id/item_servicos"
-        android:showAsAction="ifRoom"
-        android:title="@string/servicos"/>
-    <item
-        android:id="@+id/sobre"
-        android:showAsAction="ifRoom"
-        android:title="@string/sobre"/>
-
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/file"
+          android:icon="@drawable/ic_action_overflow"
+           android:title="menu"
+           android:showAsAction="always"
+         
+     >
+        <!-- submenu -->
+        <menu>
+            <item android:id="@+id/meuspets"
+                  android:title="Meus Pets" />
+              <item android:id="@+id/pesoideal"
+                  android:title="Peso Ideal" />
+            <item android:id="@+id/servicos"
+                  android:title="Serviços" />
+            <item android:id="@+id/reproducao"
+                  android:title="Reproducão" />
+        </menu>
+    </item>
 </menu>

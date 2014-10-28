@@ -11,9 +11,10 @@ public class Loading extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.loading);
+       
     }
 	// TODO Verificar necessidade desta class
+    //pra mimessa classe não ta servindo de nada
     
 /*
 

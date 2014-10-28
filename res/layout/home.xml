@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="25dp"
-        android:src="@drawable/user_foto" />
+        android:src="@drawable/user_foto" android:contentDescription="TODO"/>
 
     <TextView
         android:id="@+id/textView1"
@@ -31,38 +31,15 @@
         android:layout_below="@+id/textView1"
         android:text="@string/email_user" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignRight="@+id/textView2"
-        android:text="Serviços" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_centerVertical="true"
-        android:text="Meus Pets" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_below="@+id/button1"
-        android:layout_marginTop="68dp"
-        android:text="Reprodução" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button3"
-        android:layout_alignRight="@+id/button2"
-        android:text="Peso Ideal" />
+    <ListView
+        android:id="@+id/homeListView1"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+        
+        
+        
+    </ListView>
 
 </RelativeLayout>

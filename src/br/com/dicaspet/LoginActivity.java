@@ -19,7 +19,7 @@ public class LoginActivity extends Activity{
 			
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(getApplicationContext(),HomeActivity.class));
+				startActivity(new Intent(getApplicationContext(), HomeActivity.class));
 				finish();
 			}
 		});
