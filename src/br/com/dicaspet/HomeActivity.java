@@ -75,20 +75,22 @@ public class HomeActivity extends Activity{
 	        int id = item.getItemId();
 	        
 	        switch (id) {
-			case R.id.meuspets:
+			case R.id.item_pets:
 				startActivity(new Intent(getApplicationContext(),ListaMeusAnimaisActivity.class));
 				
 				break;
-			case R.id.pesoideal:
+			case R.id.item_peso:
 				startActivity(new Intent(getApplicationContext(),PesoIdealActivity.class));
 				break;
-			case R.id.servicos:
+			case R.id.item_servicos:
 				startActivity(new Intent(getApplicationContext(),ListaServicosActivity.class));
 				break;
-			case R.id.reproducao:
+			case R.id.item_reproducao:
 				startActivity(new Intent(getApplicationContext(),ReproducaoActivity.class));
 				break;
-		
+			case R.id.item_sobre:
+				startActivity(new Intent(getApplicationContext(),SobreActivity.class));
+				break;
 			default:
 				break;
 			}
