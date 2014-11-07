@@ -18,7 +18,7 @@
         android:layout_height="72dp"
         android:layout_x="208dp"
         android:layout_y="248dp"
-        android:src="@drawable/ic_logo_celtic" />
+        android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/empresa"

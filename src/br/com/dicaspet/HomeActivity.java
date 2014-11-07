@@ -2,15 +2,17 @@ package br.com.dicaspet;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.audiofx.LoudnessEnhancer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.ExpandableListView;
 import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class HomeActivity extends Activity{
 
@@ -89,6 +91,9 @@ public class HomeActivity extends Activity{
 				break;
 			case R.id.item_sobre:
 				startActivity(new Intent(getApplicationContext(),SobreActivity.class));
+				break;
+			case R.id.item_logout:
+				finish();
 				break;
 			default:
 				break;

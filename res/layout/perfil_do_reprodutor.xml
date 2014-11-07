@@ -41,12 +41,18 @@
     
      <Button
          android:id="@+id/bt_reprodutor"
-         android:layout_width="match_parent"
+         android:layout_width="150dp"
          android:layout_height="40dp"
          android:layout_alignParentBottom="true"
          android:layout_marginBottom="19dp"
-         android:background="#ccc"
-         android:drawableLeft="@drawable/ic_action_favorite"
+         android:layout_marginLeft="50dp"
+         android:layout_marginRight="50dp"
+         android:layout_centerHorizontal="true"
+         android:background="#37980C"
+         android:drawableLeft="@drawable/heart_icon"
+         android:paddingLeft="10dp"
+         android:textColor="#ffffff"
+         
          android:text="Gostei"
          android:textAlignment="center" />
 

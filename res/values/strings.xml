@@ -34,5 +34,10 @@
     <string name="perfil_pet">Perfil do Pet</string>
     <string name="empresa">Desenvolvido por: ©Celtic Solutions</string>
     <string name="email">contato@dicaspet.com.br</string>
+    <string name="txt_ultimas">Últimas perguntas</string>
+    <string name="fotoperfildousuario">fotoperfildousuario</string>
+    <string name="seja_bem_vindo_a_ao_dicaspet">Seja bem vindo(a) ao Dicaspet</string>
+    <string name="como_dar_banho_no_meu_c_o_">Como dar banho no meu cão?</string>
+    <string name="logout">Logout</string>
     
 </resources>

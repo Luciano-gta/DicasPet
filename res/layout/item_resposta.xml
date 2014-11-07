@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/image_usuario_resposta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/user_foto" />
+
+    <TextView
+        android:id="@+id/usuario_resposta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/image_usuario_resposta"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/image_usuario_resposta"
+        android:text="Maria Neves"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/data_resposta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/usuario_resposta"
+        android:layout_below="@+id/usuario_resposta"
+        android:text="02/11/2014" />
+
+    <TextView
+        android:id="@+id/resposta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/data_resposta"
+        android:layout_below="@+id/data_resposta"
+        android:layout_marginTop="18dp"
+        android:text="Sugiro que você leve seu cachorro a um médico especializado, ele é um médico muito bom, ah muito tempo levo meu bichinho" />
+
+</RelativeLayout>

@@ -24,7 +24,7 @@ public class PerfilReprodutorActivity extends Activity{
 				AlertDialog.Builder alerta = new AlertDialog.Builder(PerfilReprodutorActivity.this);
 	        	alerta.setIcon(R.drawable.ic_action_favorite);
 	        	alerta.setTitle("Amigo Pet para Reprodução");
-	        	alerta.setMessage("Se você clicar em OK enviaremos um e-mail para o dono do animal mostrando que você tem interesse em realizar o cruzamento com seu pet.");
+	        	alerta.setMessage("Gostaria de enviar um e-mail solicitando cruzamento?.");
 	        	// Método executado se escolher Sim
 	        	alerta.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
 	        	   public void onClick(DialogInterface dialog, int whichButton) {
