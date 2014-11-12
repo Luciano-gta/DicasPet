@@ -1,7 +1,6 @@
 package br.com.dicaspet;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
