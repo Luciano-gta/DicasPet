@@ -39,5 +39,6 @@
     <string name="seja_bem_vindo_a_ao_dicaspet">Seja bem vindo(a) ao Dicaspet</string>
     <string name="como_dar_banho_no_meu_c_o_">Como dar banho no meu cão?</string>
     <string name="logout">Logout</string>
+    <string name="lista_pets">Lista dos Pets</string>
     
 </resources>

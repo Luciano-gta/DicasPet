@@ -1,4 +1,4 @@
-package br.com.dicaspet;
+package br.com.dicaspet.adapter;
 
 import java.util.ArrayList;
 
@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import br.com.dicaspet.R;
+import br.com.dicaspet.R.id;
+import br.com.dicaspet.R.layout;
 import br.com.dicaspet.model.ItemReprodutor;
 
 public class AdapterListReprodutor extends BaseAdapter {

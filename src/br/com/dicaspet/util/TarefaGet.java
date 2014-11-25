@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
@@ -67,6 +68,7 @@ public class TarefaGet extends AsyncTask<String, String, String> {
 				arquivo.close();
 			} 
 		} catch (IOException e) {
+			publishProgress("Problema ao tentar se conectar...");
 			e.printStackTrace();
 		}
 		return linha2;

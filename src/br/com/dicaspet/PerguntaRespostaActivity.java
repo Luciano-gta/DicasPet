@@ -2,6 +2,7 @@ package br.com.dicaspet;
 
 import java.util.ArrayList;
 
+import br.com.dicaspet.adapter.AdapterListResposta;
 import br.com.dicaspet.model.ItemResposta;
 
 import android.app.Activity;

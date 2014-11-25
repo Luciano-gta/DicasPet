@@ -5,7 +5,7 @@
     android:orientation="vertical" >
     
        <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textViewPerguntaTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/como_dar_banho_no_meu_c_o_"

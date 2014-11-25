@@ -1,4 +1,4 @@
-package br.com.dicaspet;
+package br.com.dicaspet.adapter;
 
 import java.util.ArrayList;
 
@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import br.com.dicaspet.R;
 import br.com.dicaspet.model.ItemResposta;
 
 public class AdapterListResposta extends BaseAdapter {
@@ -62,7 +63,7 @@ public class AdapterListResposta extends BaseAdapter {
 	        //Pega o item de acordo com a posção.
 	        ItemResposta item = itens.get(position);
 	        //infla o layout para podermos preencher os dados
-	        view = mInflater.inflate(R.layout.item_resposta,null);
+	        view = mInflater.inflate(R.layout.item_reprodutor,null);
 	 
 	        //atravez do layout pego pelo LayoutInflater, pegamos cada id relacionado
 	        //ao item e definimos as informações.
