@@ -2,7 +2,6 @@ package br.com.dicaspet.util;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,6 +14,8 @@ import br.com.dicaspet.model.Usuario;
 public class JSONPerfil {
 	private ArrayList<Animal> listaAnimal = new ArrayList<Animal>();
 	private ArrayList<Mensagem> listaMensagem = new ArrayList<Mensagem>();
+	private Usuario userlogado = new Usuario();
+
 
 	public JSONPerfil(String Json) throws IOException, JSONException {
 
@@ -47,19 +48,22 @@ public class JSONPerfil {
 
 			mensagem.setMsg_titulo(msg.getString("msg_titulo"));
 			mensagem.setMsg_conteudo(msg.getString("msg_conteudo"));
-			// mensagem.setMsg_data_cadastro((Date)
-			// msg.get("msg_data_cadastro"));
+			mensagem.setMsg_data_cadastro(msg.getString("msg_data_cadastro"));
 
 			Usuario usuario = new Usuario();
 			JSONObject usu = msg.getJSONObject("msg_id_usu");
 
 			usuario.setUsu_id(usu.getInt("usu_id"));
 			usuario.setUsu_nome(usu.getString("usu_nome"));
-
+			
 			mensagem.setMsg_id_usu(usuario);
 
 			listaMensagem.add(mensagem);
 		}
+		
+		userlogado.setUsu_nome(objJson.getString("usu_nome"));
+		userlogado.setUsu_email(objJson.getString("usu_email"));
+		userlogado.setUsu_pontuacao(objJson.getInt("usu_pontuacao"));
 
 	}
 
@@ -72,5 +76,13 @@ public class JSONPerfil {
 	public ArrayList<Mensagem> getMsgs() {
 
 		return (listaMensagem);
+	}
+
+	public Usuario getUserlogado() {
+		return userlogado;
+	}
+
+	public void setUserlogado(Usuario userlogado) {
+		this.userlogado = userlogado;
 	}
 }

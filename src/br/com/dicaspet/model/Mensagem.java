@@ -17,13 +17,13 @@ public class Mensagem implements Serializable {
 	private long msg_cod_msg;
 	private boolean msg_isPergunta;
 	private int msg_avaliacao;
-	private Date msg_data_cadastro;
+	private String msg_data_cadastro;
 	private String msg_tipo_animal;
-	public Date getMsg_data_cadastro() {
+	public String getMsg_data_cadastro() {
 		return msg_data_cadastro;
 	}
 
-	public void setMsg_data_cadastro(Date msg_data_cadastro) {
+	public void setMsg_data_cadastro(String msg_data_cadastro) {
 		this.msg_data_cadastro = msg_data_cadastro;
 	}
 

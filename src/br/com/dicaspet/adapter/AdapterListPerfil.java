@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,16 +11,15 @@ import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.TextView;
 import br.com.dicaspet.R;
-import br.com.dicaspet.R.id;
-import br.com.dicaspet.R.layout;
 import br.com.dicaspet.model.Mensagem;
 
+@SuppressLint("DefaultLocale")
 public class AdapterListPerfil  extends BaseAdapter{
 
 	private Context context;
 	private ListFilter listFilter;
 	private ArrayList<Mensagem> lista;
-	private ArrayList<Mensagem> listaFiltrada;;
+	private ArrayList<Mensagem> listaFiltrada;
 
 	public AdapterListPerfil(Context context, ArrayList<Mensagem> lista) {
 		this.context = context;
@@ -72,13 +70,14 @@ public class AdapterListPerfil  extends BaseAdapter{
 
 		TextView nome = (TextView) layout.findViewById(R.id.textViewPerguntaTitulo);
 		nome.setText(Msg.getMsg_titulo());
-
+		
+/*
 		if (position % 2 == 0) {
-			layout.setBackgroundColor(Color.parseColor("#7FFFD4"));
+			layout.setBackgroundColor(Color.parseColor("#FFF5EE"));
 		} else {
-			layout.setBackgroundColor(Color.parseColor("#B4F796"));
+			layout.setBackgroundColor(Color.parseColor("#CDC5BF"));
 		}
-
+*/
 		return layout;
 	}
 

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends Activity {
 	EditText ETemail;
@@ -29,11 +30,16 @@ public class LoginActivity extends Activity {
 						HomeActivity.class);
 				String email = ETemail.getText().toString();
 				String senha = ETsenha.getText().toString();
+				if(!email.isEmpty() && !senha.isEmpty()){
+					it.putExtra("email", email);
+					it.putExtra("senha", senha);
+					startActivity(it);
+					finish();
+				}else{
+					Toast.makeText(getApplicationContext(), "Favor preencher o usuário e senha", Toast.LENGTH_SHORT).show();
+				}
 
-				it.putExtra("email", email);
-				it.putExtra("senha", senha);
-				startActivity(it);
-				finish();
+
 			}
 		});
 	}

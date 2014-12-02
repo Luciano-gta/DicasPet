@@ -34,9 +34,18 @@
         android:id="@+id/resposta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/data_resposta"
-        android:layout_below="@+id/data_resposta"
-        android:layout_marginTop="18dp"
+        android:layout_below="@+id/image_usuario_resposta"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:text="Sugiro que você leve seu cachorro a um médico especializado, ele é um médico muito bom, ah muito tempo levo meu bichinho" />
+
+    <TextView
+        android:id="@+id/TextViewTituloResp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_usuario_resposta"
+        android:layout_alignLeft="@+id/data_resposta"
+        android:text="resposta"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

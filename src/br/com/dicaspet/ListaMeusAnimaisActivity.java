@@ -14,7 +14,7 @@ import br.com.dicaspet.model.Animal;
 
 public class ListaMeusAnimaisActivity extends Activity {
 	private AdapterListMeuPets adapterMeusPets;
-	ListView listview;
+	private ListView listview;
 	
 
 	@Override

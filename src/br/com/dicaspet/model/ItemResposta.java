@@ -1,7 +1,13 @@
 package br.com.dicaspet.model;
 
-public class ItemResposta {
+import java.io.Serializable;
 
+public class ItemResposta implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3383645140708374249L;
 	private String nome_user;
 	private int iconeRid;
 	private String data;

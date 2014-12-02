@@ -40,5 +40,7 @@
     <string name="como_dar_banho_no_meu_c_o_">Como dar banho no meu cão?</string>
     <string name="logout">Logout</string>
     <string name="lista_pets">Lista dos Pets</string>
-    
+	<string name="pesquisar">Buscar</string>    
+	<string name="pontuacao">Pontuação Atual:</string>
 </resources>
+

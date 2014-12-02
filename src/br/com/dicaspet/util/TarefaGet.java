@@ -39,8 +39,8 @@ public class TarefaGet extends AsyncTask<String, String, String> {
 			
 			HttpURLConnection connection = (HttpURLConnection) url
 					.openConnection();
-			connection.setConnectTimeout(4000);
-			connection.setReadTimeout(4000);
+			connection.setConnectTimeout(10000);
+			connection.setReadTimeout(10000);
 			
 			// se true indica que enviaremos dados no corpo da requisição
 			// (padrão é

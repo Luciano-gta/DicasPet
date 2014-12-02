@@ -15,7 +15,7 @@ public class Usuario implements Serializable {
 	private static final long serialVersionUID = -59705556868385807L;
 	private long usu_id;
 	private String usu_foto;
-	private Date data_cadastro;
+	private String data_cadastro;
 	private String usu_nome;
 	private String usu_tipo_servico;
 	private String usu_cfp;
@@ -38,11 +38,11 @@ public class Usuario implements Serializable {
 		this.usu_id = usu_id;
 	}
 
-	public Date getData_cadastro() {
+	public String getData_cadastro() {
 		return data_cadastro;
 	}
 
-	public void setData_cadastro(Date data_cadastro) {
+	public void setData_cadastro(String data_cadastro) {
 		this.data_cadastro = data_cadastro;
 	}
 
