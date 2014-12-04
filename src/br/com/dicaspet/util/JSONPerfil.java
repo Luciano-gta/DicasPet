@@ -33,10 +33,11 @@ public class JSONPerfil {
 			pet.setAni_porte(animal.getString("ani_porte"));
 			pet.setAni_peso(animal.getDouble("ani_peso"));
 			pet.setAni_idade(animal.getDouble("ani_idade"));
-			pet.setAni_nome(animal.getString("ani_raca"));
-			pet.setAni_nome(animal.getString("ani_nome"));
+			pet.setAni_raca(animal.getString("ani_raca"));
+			pet.setAni_sexo(animal.getString("ani_sexo"));
+			pet.setAni_foto(animal.getString("ani_foto"));
 			listaAnimal.add(pet);
-
+			
 		}
 
 		JSONArray aMsgs = objJson.getJSONArray("msgs");

@@ -44,15 +44,17 @@ public class HomeActivity extends Activity {
 	private TextView nome_user;
 	private TextView email_user;
 	private TextView pontuacao_user;
+	private String json;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
 		// StrictMode.ThreadPolicy policy = new StrictMode.
 		// ThreadPolicy.Builder().permitAll().build();
 		// StrictMode.setThreadPolicy(policy);
 		// Recuperar Usuario e senha
+
 		Intent it = getIntent();
 		String email = it.getStringExtra("email");
 		String senha = it.getStringExtra("senha");
@@ -65,98 +67,127 @@ public class HomeActivity extends Activity {
 
 		JSONPerfil jPerfil = null;
 		try {
-			jPerfil = new JSONPerfil(tarefa.get());
-		} catch (IOException e) {
+			json = tarefa.get();
+		} catch (InterruptedException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (JSONException e) {
+			e1.printStackTrace();
+		} catch (ExecutionException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-			alertDialog.setTitle("Erro");
-			alertDialog
-					.setMessage("Ocorreu um problema ao tentar buscar as informações.\n"
-
-							+ "Verifique sua conexão e tente novamente!");
-			alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
-			alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "OK",
-					new DialogInterface.OnClickListener() {
-						@Override
-						public void onClick(final DialogInterface dialog,
-								final int which) {
-							finish();
-						}
-					});
-			alertDialog.show();
-			e.printStackTrace();
-		} catch (ExecutionException e) {
-			AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-			alertDialog.setTitle("Erro");
-			alertDialog
-					.setMessage("Ocorreu um problema ao tentar buscar as informações.\n"
-
-							+ "Verifique sua conexão e tente novamente!");
-			alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
-			alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "OK",
-					new DialogInterface.OnClickListener() {
-						@Override
-						public void onClick(final DialogInterface dialog,
-								final int which) {
-							finish();
-						}
-					});
-			alertDialog.show();
-			e.printStackTrace();
+			e1.printStackTrace();
 		}
-		setContentView(R.layout.home);
 
-		listaMsg  = jPerfil.getMsgs();
-		listaPets = jPerfil.getAnimais();
-		usuario   = jPerfil.getUserlogado();
+		if (!json.isEmpty()) {
 
-		// Inseri e exibi dados no listview
-		listview       = (ListView) findViewById(R.id.homeListView);
-		nome_user      = (TextView) findViewById(R.id.textViewNome);
-		email_user     = (TextView) findViewById(R.id.textViewEmail);
-		pontuacao_user = (TextView) findViewById(R.id.textViewPontuacao);
-		
-		nome_user.setText(usuario.getUsu_nome());
-		email_user.setText(usuario.getUsu_email());
-		pontuacao_user.setText(usuario.getUsu_pontuacao().toString());
-		
-		adpListPerfil = new AdapterListPerfil(this, listaMsg);
-		listview.setAdapter(adpListPerfil);
-		listview.setTextFilterEnabled(false);
-		
-		listview.setOnItemClickListener(new OnItemClickListener() {
+			try {
 
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
+				jPerfil = new JSONPerfil(json);
+			} catch (IOException e) {
+				AlertDialog alertDialog = new AlertDialog.Builder(this)
+						.create();
+				alertDialog.setTitle("Erro");
+				alertDialog
+						.setMessage("Ocorreu um problema ao tentar buscar as informações.\n"
 
-				Intent it = new Intent(getApplicationContext(),
-						PerguntaRespostaActivity.class);
+								+ "Verifique sua conexão e tente novamente!");
+				alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
+				alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "OK",
+						new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(final DialogInterface dialog,
+									final int which) {
+								finish();
+							}
+						});
+				alertDialog.show();
+				e.printStackTrace();
+			} catch (JSONException e) {
+				AlertDialog alertDialog = new AlertDialog.Builder(this)
+						.create();
+				alertDialog.setTitle("Erro");
+				alertDialog
+						.setMessage("Ocorreu um problema ao tentar buscar as informações.\n"
 
-				ArrayList<ItemResposta> aRespostas = new ArrayList<ItemResposta>();
-				Mensagem mensagem = (Mensagem) adpListPerfil.getItem(position);
-
-				//String nome_user, int iconeRid, String data, String resposta
-				ItemResposta resposta = new ItemResposta(mensagem
-						.getMsg_id_usu().getUsu_nome(), 1, mensagem
-						.getMsg_data_cadastro(),mensagem.getMsg_conteudo());
-
-				aRespostas.add(resposta);
-				
-				it.putExtra("respostas", aRespostas);
-				it.putExtra("titulo", mensagem.getMsg_titulo());
-
-				startActivity(it);
-
+								+ "Verifique sua conexão e tente novamente!");
+				alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
+				alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "OK",
+						new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(final DialogInterface dialog,
+									final int which) {
+								finish();
+							}
+						});
+				alertDialog.show();
+				e.printStackTrace();
 			}
 
-		});
+			setContentView(R.layout.home);
 
+			listaMsg = jPerfil.getMsgs();
+			listaPets = jPerfil.getAnimais();
+			usuario = jPerfil.getUserlogado();
+
+			// Inseri e exibi dados no listview
+			listview = (ListView) findViewById(R.id.homeListView);
+			nome_user = (TextView) findViewById(R.id.textViewNome);
+			email_user = (TextView) findViewById(R.id.textViewEmail);
+			pontuacao_user = (TextView) findViewById(R.id.textViewPontuacao);
+
+			nome_user.setText(usuario.getUsu_nome());
+			email_user.setText(usuario.getUsu_email());
+			pontuacao_user.setText(usuario.getUsu_pontuacao().toString());
+
+			adpListPerfil = new AdapterListPerfil(this, listaMsg);
+			listview.setAdapter(adpListPerfil);
+			listview.setTextFilterEnabled(false);
+
+			listview.setOnItemClickListener(new OnItemClickListener() {
+
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view,
+						int position, long id) {
+
+					Intent it = new Intent(getApplicationContext(),
+							PerguntaRespostaActivity.class);
+
+					ArrayList<ItemResposta> aRespostas = new ArrayList<ItemResposta>();
+					Mensagem mensagem = (Mensagem) adpListPerfil
+							.getItem(position);
+
+					// String nome_user, int iconeRid, String data, String
+					// resposta
+					ItemResposta resposta = new ItemResposta(mensagem
+							.getMsg_id_usu().getUsu_nome(), 1, mensagem
+							.getMsg_data_cadastro(), mensagem.getMsg_conteudo());
+
+					aRespostas.add(resposta);
+
+					it.putExtra("respostas", aRespostas);
+					it.putExtra("titulo", mensagem.getMsg_titulo());
+
+					startActivity(it);
+
+				}
+
+			});
+		} else {
+			AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+			alertDialog.setTitle("Erro");
+			alertDialog
+					.setMessage("Ocorreu um problema ao tentar buscar as informações.\n"
+
+							+ "Verifique sua conexão e tente novamente!");
+			alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
+			alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "OK",
+					new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(final DialogInterface dialog,
+								final int which) {
+							finish();
+						}
+					});
+			alertDialog.show();
+		}
 	}
 
 	@Override
@@ -225,7 +256,7 @@ public class HomeActivity extends Activity {
 			break;
 		case R.id.item_peso:
 			startActivity(new Intent(getApplicationContext(),
-					PesoIdealActivity.class));
+					PesoActivity.class));
 			break;
 		case R.id.item_servicos:
 			startActivity(new Intent(getApplicationContext(),

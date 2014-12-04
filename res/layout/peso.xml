@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_back_peso" >
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editTextQuantPeso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -17,33 +18,33 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/editTextQuantPeso"
+        android:layout_below="@+id/editTextQuantPeso"
         android:layout_marginTop="16dp"
         android:text="@string/porte" />
 
     <RadioGroup
-        android:id="@+id/radioGroup1"
+        android:id="@+id/radioGroupPorte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView2"
         android:layout_below="@+id/textView2" >
 
         <RadioButton
-            android:id="@+id/radio0"
+            android:id="@+id/radioPequeno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
             android:text="@string/pequeno" />
 
         <RadioButton
-            android:id="@+id/radio1"
+            android:id="@+id/radioMedio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/medio" />
 
         <RadioButton
-            android:id="@+id/radio2"
+            android:id="@+id/radioGrande"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/grande" />
@@ -53,27 +54,27 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/radioGroup1"
-        android:layout_below="@+id/radioGroup1"
+        android:layout_alignLeft="@+id/radioGroupPorte"
+        android:layout_below="@+id/radioGroupPorte"
         android:layout_marginTop="16dp"
         android:text="@string/sexo" />
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/radioGroupSexo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView3"
         android:layout_below="@+id/textView3" >
 
         <RadioButton
-            android:id="@+id/radio4"
+            android:id="@+id/radioMacho"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
             android:text="@string/macho" />
 
         <RadioButton
-            android:id="@+id/radio5"
+            android:id="@+id/radioFemea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/femea" />
@@ -83,7 +84,7 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/radioGroup2"
+        android:layout_below="@+id/radioGroupSexo"
         android:layout_centerHorizontal="true"
         android:text="@string/calcular" />
 

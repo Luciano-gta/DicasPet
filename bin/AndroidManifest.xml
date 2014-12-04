@@ -51,7 +51,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PesoIdealActivity"
+            android:name=".PesoActivity"
             android:label="Consulta Peso Ideal"
             android:parentActivityName="br.com.dicaspet.HomeActivity" >
             <meta-data
@@ -75,7 +75,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PerfilAnimalActivity"
+            android:name=".PerfilPetActivity"
             android:label="Perfil do Pet"
             android:parentActivityName="br.com.dicaspet.HomeActivity" >
             <meta-data

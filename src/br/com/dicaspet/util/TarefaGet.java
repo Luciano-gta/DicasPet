@@ -64,6 +64,7 @@ public class TarefaGet extends AsyncTask<String, String, String> {
 
 				while ((linha = arquivo.readLine()) != null) {
 					linha2 += linha;
+					publishProgress(linha);
 				}
 				arquivo.close();
 			} 
@@ -73,7 +74,7 @@ public class TarefaGet extends AsyncTask<String, String, String> {
 		}
 		return linha2;
 	}
-
+	
 	// Termina e Thread e pega seu retorno
 	@Override
 	protected void onPostExecute(String result) {

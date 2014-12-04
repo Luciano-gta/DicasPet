@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background" >
 
     <ListView
         android:id="@+id/lista_animais"
@@ -9,15 +10,5 @@
         android:layout_height="match_parent"
         android:divider="#FFECECEC"
         android:dividerHeight="2sp" />
-<!-- 
-    <TextView
-        android:id="@+id/nomeAnimal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="@string/lista_pets"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textSize="20sp"
-        android:textStyle="bold" />
--->
+
 </RelativeLayout>

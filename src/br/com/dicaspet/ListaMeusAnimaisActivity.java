@@ -11,6 +11,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import br.com.dicaspet.adapter.AdapterListMeuPets;
 import br.com.dicaspet.model.Animal;
+import br.com.dicaspet.model.ItemResposta;
+import br.com.dicaspet.model.Mensagem;
 
 public class ListaMeusAnimaisActivity extends Activity {
 	private AdapterListMeuPets adapterMeusPets;
@@ -38,28 +40,17 @@ public class ListaMeusAnimaisActivity extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 
-				/*
-				 * // ListView Clicked item index int itemPosition = position;
-				 * 
-				 * // ListView Clicked item value String itemValue = (String)
-				 * listview.getItemAtPosition(position);
-				 * 
-				 * // Show Alert Toast.makeText(getApplicationContext(),
-				 * "Position :"+itemPosition+"  ListItem : " +itemValue ,
-				 * Toast.LENGTH_LONG) .show();
-				 */
+	
 
-				int itemPositon = position;
-				switch (itemPositon) {
-				case 0:
-					startActivity(new Intent(getApplicationContext(),
-							PerfilAnimalActivity.class));
-					finish();
-					break;
+				Intent it = new Intent(getApplicationContext(),
+						PerfilPetActivity.class);
 
-				default:
-					break;
-				}
+
+				Animal pet = (Animal) adapterMeusPets.getItem(position);
+
+				it.putExtra("pet", pet);
+				startActivity(it);
+
 
 			}
 

@@ -4,28 +4,23 @@
     android:layout_height="match_parent" >
 
     <ImageView
-        android:id="@+id/img"
+        android:id="@+id/imgPet"
         android:layout_alignParentLeft="true"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@android:drawable/toast_frame" />
+        android:src="@drawable/ic_img_pet"
+        android:contentDescription="@string/lista_pets" />
 
     <TextView
         android:id="@+id/nomeAnimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgPet"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="15dp"
-        android:layout_toRightOf="@id/img"
+        android:layout_toRightOf="@id/imgPet"
+        android:gravity="center|left"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/local"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/nomeAnimal"
-        android:layout_below="@id/nomeAnimal"
-        android:layout_marginLeft="15dp"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
+   
 </RelativeLayout>

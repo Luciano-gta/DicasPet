@@ -21,7 +21,7 @@
         android:layout_alignParentBottom="true"
         android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/ic_bacground" >
+        android:background="@drawable/ic_background" >
 
     </ListView>
 
