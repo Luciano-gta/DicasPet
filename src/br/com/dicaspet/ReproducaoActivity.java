@@ -32,9 +32,9 @@ public class ReproducaoActivity extends Activity {
 		pet = (Animal) getIntent().getSerializableExtra("pet");
 
 		// Servidor FAFICA
-		String url = "http://web2.fafica-pe.edu.br:8080/br.fafica.dicaspet/service/reproducao/"
+		//String url = "http://web2.fafica-pe.edu.br:8080/br.fafica.dicaspet/service/reproducao/"
 		// Servidor GIVA
-		//String url = "http://dicaspet.ddns.net:50000/service/service/reproducao/"
+		String url = "http://dicaspet.ddns.net:50000/service/service/reproducao/"
 				+ pet.getAni_raca() + "/" + pet.getAni_sexo();
 
 		// Thread a parte Pegar o resultado
