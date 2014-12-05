@@ -14,38 +14,6 @@
  	  	android:layout_height="70dp"
  	    android:contentDescription="TODO"
  	    android:src="@drawable/rp_cao" />
-
- 	<TextView 
- 	    android:id="@+id/nome_reprodutor"
- 	    android:layout_width="wrap_content"
- 	    android:layout_height="wrap_content"
-  	    android:text="Mr. Rex"
- 	    android:layout_toRightOf="@id/image_animal_reprodutor"
- 	    android:layout_marginTop="5dp"
- 	    android:layout_marginLeft="5dp"
- 	    android:textSize="16dp"
- 	    />
- 	<TextView 
- 	    android:id="@+id/raca_reprodutor"
- 	    android:layout_width="wrap_content"
- 	    android:layout_height="wrap_content"
-  	    android:text="Vira Lata"
- 	  	android:layout_below="@id/nome_reprodutor"
- 	  	android:layout_toRightOf="@id/image_animal_reprodutor"
- 	  	 android:layout_marginLeft="5dp"
- 	  	android:textSize="12dp"
- 	    />
- 	
- 	<TextView 
- 	    android:id="@+id/idade_reprodutor"
- 	    android:layout_width="wrap_content"
- 	    android:layout_height="wrap_content"
-  	    android:text="02 anos"
- 	  	android:layout_below="@id/raca_reprodutor"
- 	  	android:layout_toRightOf="@id/image_animal_reprodutor"
- 	  	 android:layout_marginLeft="5dp"
- 	  	android:textSize="12dp"
- 	    />
  	
  	<Button
  	    android:id="@+id/bt_reprodutor"
@@ -59,5 +27,75 @@
  	    android:paddingLeft="10dp"
  	    android:textAlignment="center"
  	    android:textColor="#ffffff" />
+
+ 	<TextView
+ 	    android:id="@+id/textView1"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignBaseline="@+id/nome_reprodutor"
+ 	    android:layout_alignBottom="@+id/nome_reprodutor"
+ 	    android:layout_toRightOf="@+id/image_animal_reprodutor"
+ 	    android:text="Nome: " />
+
+ 	<TextView
+ 	    android:id="@+id/textView2"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignTop="@+id/raca_reprodutor"
+ 	    android:layout_toRightOf="@+id/image_animal_reprodutor"
+ 	    android:text="Raça: " />
+
+ 	<TextView
+ 	    android:id="@+id/textView3"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_below="@+id/textView2"
+ 	    android:layout_toRightOf="@+id/image_animal_reprodutor"
+ 	    android:text="Idade: " />
+
+ 	<TextView
+ 	    android:id="@+id/textView4"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_below="@+id/textView3"
+ 	    android:layout_toRightOf="@+id/image_animal_reprodutor"
+ 	    android:text="Porte: " />
+
+ 	<TextView
+ 	    android:id="@+id/nome_reprodutor"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignParentTop="true"
+ 	    android:layout_marginLeft="16dp"
+ 	    android:layout_toRightOf="@+id/textView1"
+ 	    android:text="Mr. Rex"
+ 	    android:textSize="16dp" />
+
+ 	<TextView
+ 	    android:id="@+id/raca_reprodutor"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignLeft="@+id/nome_reprodutor"
+ 	    android:layout_below="@+id/nome_reprodutor"
+ 	    android:text="Vira Lata"
+ 	    android:textSize="12dp" />
+
+ 	<TextView
+ 	    android:id="@+id/idade_reprodutor"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignLeft="@+id/raca_reprodutor"
+ 	    android:layout_below="@+id/textView2"
+ 	    android:text="02 anos"
+ 	    android:textSize="12dp" />
+
+ 	<TextView
+ 	    android:id="@+id/PorteReprodutor"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignLeft="@+id/idade_reprodutor"
+ 	    android:layout_below="@+id/textView3"
+ 	    android:text="Médio"
+ 	    android:textSize="12dp" />
 
 </RelativeLayout>

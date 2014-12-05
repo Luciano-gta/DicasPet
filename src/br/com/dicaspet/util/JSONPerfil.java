@@ -57,6 +57,12 @@ public class JSONPerfil {
 			usuario.setUsu_id(usu.getInt("usu_id"));
 			usuario.setUsu_nome(usu.getString("usu_nome"));
 			
+			if(!usu.isNull("usu_foto")){
+				usuario.setUsu_foto(usu.getString("usu_foto"));
+			}else{
+				usuario.setUsu_foto("");
+			}
+			
 			mensagem.setMsg_id_usu(usuario);
 
 			listaMensagem.add(mensagem);
@@ -65,6 +71,12 @@ public class JSONPerfil {
 		userlogado.setUsu_nome(objJson.getString("usu_nome"));
 		userlogado.setUsu_email(objJson.getString("usu_email"));
 		userlogado.setUsu_pontuacao(objJson.getInt("usu_pontuacao"));
+		
+		if(!objJson.isNull("usu_foto")){
+			userlogado.setUsu_foto(objJson.getString("usu_foto"));
+		}else{
+			userlogado.setUsu_foto("");
+		}
 
 	}
 

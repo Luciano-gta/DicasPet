@@ -1,5 +1,6 @@
 package br.com.dicaspet;
 
+import br.com.dicaspet.model.Animal;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -10,10 +11,17 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class PerfilReprodutorActivity extends Activity{
+
+	private Animal pet;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.perfil_do_reprodutor);
+		
+		
+		
+		pet = (Animal) getIntent().getSerializableExtra("pet");
+		
 		
 		Button botao = (Button) findViewById(R.id.bt_reprodutor);
 		botao.setOnClickListener(new OnClickListener() {

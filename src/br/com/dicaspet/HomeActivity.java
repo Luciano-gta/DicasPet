@@ -12,6 +12,7 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
@@ -31,6 +33,7 @@ import br.com.dicaspet.model.Mensagem;
 import br.com.dicaspet.model.Usuario;
 import br.com.dicaspet.util.JSONPerfil;
 import br.com.dicaspet.util.TarefaGet;
+import br.com.dicaspet.util.TarefaGetImagem;
 
 public class HomeActivity extends Activity {
 
@@ -44,6 +47,7 @@ public class HomeActivity extends Activity {
 	private TextView nome_user;
 	private TextView email_user;
 	private TextView pontuacao_user;
+	private ImageView foto_user;
 	private String json;
 
 	@Override
@@ -58,7 +62,11 @@ public class HomeActivity extends Activity {
 		Intent it = getIntent();
 		String email = it.getStringExtra("email");
 		String senha = it.getStringExtra("senha");
-		String url = "http://web2.fafica-pe.edu.br:8080/br.fafica.dicaspet/service/login/"
+		
+		//Servidor FAFICA
+		//String url = "http://web2.fafica-pe.edu.br:8080/br.fafica.dicaspet/service/login/"
+		//Servidor GIVA
+		String url = "http://dicaspet.ddns.net:50000/service/service/login/"
 				+ email + "/" + senha;
 		// GetDados buscarPerfil = new GetDados(url);
 		// Thread a parte Pegar o resultado
@@ -132,11 +140,30 @@ public class HomeActivity extends Activity {
 			nome_user = (TextView) findViewById(R.id.textViewNome);
 			email_user = (TextView) findViewById(R.id.textViewEmail);
 			pontuacao_user = (TextView) findViewById(R.id.textViewPontuacao);
+			foto_user = (ImageView) findViewById(R.id.imageViewUserHome);
 
 			nome_user.setText(usuario.getUsu_nome());
 			email_user.setText(usuario.getUsu_email());
 			pontuacao_user.setText(usuario.getUsu_pontuacao().toString());
-
+			
+			if (usuario.getUsu_foto().isEmpty()) {
+				foto_user.setImageResource(R.drawable.user_foto);
+			} else {
+				 
+				Drawable drawable;
+				try {
+					drawable = new TarefaGetImagem().execute(usuario.getUsu_foto()).get();
+					foto_user.setImageDrawable(drawable);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (ExecutionException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} 
+				
+			}
+			
 			adpListPerfil = new AdapterListPerfil(this, listaMsg);
 			listview.setAdapter(adpListPerfil);
 			listview.setTextFilterEnabled(false);
@@ -261,10 +288,6 @@ public class HomeActivity extends Activity {
 		case R.id.item_servicos:
 			startActivity(new Intent(getApplicationContext(),
 					ListaServicosActivity.class));
-			break;
-		case R.id.item_reproducao:
-			startActivity(new Intent(getApplicationContext(),
-					ReproducaoActivity.class));
 			break;
 		case R.id.item_sobre:
 			startActivity(new Intent(getApplicationContext(),

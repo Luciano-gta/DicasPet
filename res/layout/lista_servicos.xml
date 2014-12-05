@@ -4,12 +4,11 @@
     android:layout_height="match_parent" >
     
 	    <ListView
-     	android:id="@+id/lista_animais"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:divider="#FFECECEC"
-        android:dividerHeight="2sp" />
- 
-    
+	        android:id="@+id/lista_servicos"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:background="@drawable/ic_background"
+	        android:divider="#FFECECEC"
+	        android:dividerHeight="2sp" />
 	    
 </RelativeLayout>

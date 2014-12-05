@@ -29,10 +29,10 @@
         android:id="@+id/textViewNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageView1"
+        android:layout_alignTop="@+id/imageViewUserHome"
         android:layout_marginLeft="22dp"
         android:layout_marginTop="20dp"
-        android:layout_toRightOf="@+id/imageView1"
+        android:layout_toRightOf="@+id/imageViewUserHome"
         android:text="@string/nome_user" />
 
     <TextView
@@ -41,11 +41,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewNome"
         android:layout_marginLeft="22dp"
-        android:layout_toRightOf="@+id/imageView1"
+        android:layout_toRightOf="@+id/imageViewUserHome"
         android:text="@string/email_user" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/imageViewUserHome"
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_alignParentLeft="true"
@@ -59,7 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/imageView1"
+        android:layout_below="@+id/imageViewUserHome"
         android:background="#B4F796"
         android:padding="2dp"
         android:text="@string/txt_ultimas"
@@ -70,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textViewNome"
-        android:layout_alignTop="@+id/imageView1"
+        android:layout_alignTop="@+id/imageViewUserHome"
         android:text="@string/pontuacao" />
 
     <TextView

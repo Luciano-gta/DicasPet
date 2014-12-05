@@ -1,9 +1,11 @@
 package br.com.dicaspet.adapter;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import br.com.dicaspet.R;
 import br.com.dicaspet.model.Animal;
+import br.com.dicaspet.util.TarefaGetImagem;
 
 @SuppressLint("DefaultLocale")
 public class AdapterListMeuPets extends BaseAdapter {
@@ -63,7 +66,25 @@ public class AdapterListMeuPets extends BaseAdapter {
 		ImageView img = (ImageView) layout.findViewById(R.id.imgPet);
 
 		nome.setText(pet.getAni_nome());
-		img.setImageResource(R.drawable.ic_img_pet);
+		
+		if (pet.getAni_foto().isEmpty()) {
+			img.setImageResource(R.drawable.ic_img_pet);
+		} else {
+			 
+			Drawable drawable;
+			try {
+				drawable = new TarefaGetImagem().execute(pet.getAni_foto()).get();
+				img.setImageDrawable(drawable);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ExecutionException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
+			
+		}
+		
 		
 		
 /* retirar cor por linha e colocar background

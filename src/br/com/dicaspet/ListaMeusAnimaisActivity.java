@@ -11,8 +11,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import br.com.dicaspet.adapter.AdapterListMeuPets;
 import br.com.dicaspet.model.Animal;
-import br.com.dicaspet.model.ItemResposta;
-import br.com.dicaspet.model.Mensagem;
 
 public class ListaMeusAnimaisActivity extends Activity {
 	private AdapterListMeuPets adapterMeusPets;

@@ -63,7 +63,7 @@ public class AdapterListResposta extends BaseAdapter {
 	        //Pega o item de acordo com a posção.
 	        ItemResposta item = itens.get(position);
 	        //infla o layout para podermos preencher os dados
-	        view = mInflater.inflate(R.layout.item_reprodutor,null);
+	        view = mInflater.inflate(R.layout.item_resposta,null);
 	 
 	        //atravez do layout pego pelo LayoutInflater, pegamos cada id relacionado
 	        //ao item e definimos as informações.
